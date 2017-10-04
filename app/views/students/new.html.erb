@@ -1,0 +1,16 @@
+<%= form_tag students_path do |post| %>
+  <%= label_tag(:Name, "Name") %>
+  <%= text_field_tag(:Name, nil, placeholder: @Name) %>
+
+  <%= label_tag(:Hometown, "Hometown") %>
+  <%= text_field_tag(:Hometown, nil, placeholder: @Hometown) %>
+
+  <%= label_tag(:Hobby, "Hobby") %>
+  <%= text_field_tag(:Hobby, nil, placeholder: @Hobby) %>
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <%= submit_tag("Create student") %>
+<% end %>
+
+
